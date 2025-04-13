@@ -16,7 +16,7 @@ struct Dme07: Driver
   virtual esphome::optional<std::map<std::string, double>> get_values(std::vector<unsigned char> &telegram) override {
     std::map<std::string, double> ret_val{};
 
-    add_to_map(ret_val, "total_water_m3", this->get_0413(telegram));
+    add_to_map(ret_val, "total_m3", this->get_0413(telegram));
 
     if (ret_val.size() > 0) {
       return ret_val;
